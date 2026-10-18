@@ -20,8 +20,7 @@ def home():
     if request.method == 'POST':
         cmd = request.form['text']
         try:
-            output = subprocess.check_output(cmd, shell=True)
-            output = output.decode('utf-8')
+            output = "Command execution is disabled."
         
         except Exception as e:
             output = "Error running command\n" + str(e)
